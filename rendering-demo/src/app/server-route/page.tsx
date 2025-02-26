@@ -1,4 +1,5 @@
-import { serverSideFunction } from "@/utils/server-utils"
+import ImageSlider from "@/components/ImageSlider";
+import { serverSideFunction } from "@/utils/server-utils";
 
 export default function ServerRoutePage() {
     console.log("Server route rendered");
@@ -6,7 +7,8 @@ export default function ServerRoutePage() {
   return (
     <>
         <h1>Server Side Page</h1>
-        <p>{result}</p>
+        <ImageSlider />
+        {/* <p>{result}</p> */}
     </>
   )
 }
