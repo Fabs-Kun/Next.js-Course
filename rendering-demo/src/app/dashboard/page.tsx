@@ -2,14 +2,23 @@
 
 import { useState } from "react"
 
-export default function dashboardPage(){
-    console.log("Dashboard Client Component")
-    const [name, setName] = useState("")
-    return(
+
+import React from 'react'
+
+function Page() {
+    const [name, setName] = useState("fab")
+
+    return (
         <div>
-            <h1>Dashbaord Page</h1>
-            <input value={name} onChange={(e) => setName(e.target.value)}/>
-            <p>Hello, {name}!</p>
+            {name}
+
+            <input type="text" onChange={e=> setName(e.currentTarget.value)} />
         </div>
     )
 }
+
+export default Page
+
+
+
+
